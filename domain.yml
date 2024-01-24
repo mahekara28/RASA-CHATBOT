@@ -1,0 +1,76 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - i_am_sick
+  - sunstroke
+  - flu
+  - stomachache
+  - weakness
+  - throat pain
+
+ 
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_sick:
+  - text: "What Happened Sir/Ma'am ?"
+
+  utter_sunstroke:
+  - text: "Ohh!!! If you have the symptoms like..High body temperature. A core body temperature of 104 F (40 C) or higher, obtained with a rectal thermometer, is the main sign of heatstroke/Altered mental state or behavior/Alteration in sweating,Nausea and vomiting,Flushed skin,Rapid breathing,Racing heart rate,Headache.Then you can take any of the medicine given below"
+
+  utter_sunstroke_medicines:
+  - text: "Cool water is misted on your body while warm air is fanned over you, causing the water to evaporate and cool your skin. Pack you with ice and cooling blankets. Another method is to wrap you in a special cooling blanket and apply ice packs to your groin, neck, back and armpits to lower your temperature."
+ 
+  utter_flu:
+  - text: "Ohh!!! If you have the symptoms like...fever or feeling feverish/chills/cough/sore throat/runny or stuffy nose/muscle or body aches/headaches/fatigue (tiredness)Then you can take any of the medicine given below"
+
+  utter_flu_medicines:
+  - text: "Antiviral flu drugs are taken to decrease the severity and duration of flu symptoms. In some cases they may be used to prevent flu. They include baloxavir marboxil (Xofluza), oseltamivir (Tamiflu), peramivir (Rapivab), or zanamivir (Relenza)"
+
+  utter_stomachache:
+  - text: "Ohh!!! If you have the symptoms like...Mild or severe/Dull or sharp/Burning or achy/Crampy or colicky/Constant or intermittent/Localized (in one spot) or generalized (all over).Then you can take any of the medicine given below"
+
+  utter_stomachache_medicines: 
+  - text: "Cyclopam/Azotum /Buovent (200 mcg)/Anaspas (50+50)/ Doxytop"
+
+  utter_weakness:
+  - text: "Ohh!!! If you have any of the Signs and symptoms of weakness can include trouble doing daily tasks, such as grooming or writing or problems with gait and loss of balance. Many people use the term weakness as a synonym for tiredness, weariness, lack of energy or fatigue.Then you can take any of the medicine given below"
+
+  utter_weakness_medicines:
+  - text: "Drinking plenty of fluids, getting adequate rest, and exercising regularly can help you recover from weakness and also prevent it/ Enerzal Energy drink"
+
+  utter_throat_pain:
+  - text: "Ohh!!! If you have the symptoms like Pain or a scratchy sensation in the throat/Pain that worsens with swallowing or talking/Difficulty swallowing/Sore, swollen glands in your neck or jaw/Swollen, red tonsils/White patches or pus on your tonsils/A hoarse or muffled voice.Then you can take any of the medicine given below"
+
+  utter_throat_pain_medicines:
+  - text: "Cofsils/Wokadine/Boiron/Gargling with Salt Water/Honey For a Sore Throat"
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slot_to_nwe_session: true

@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+
+- story: path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: sunstroke
+  - action: utter_sunstroke
+  - action: utter_sunstroke_medicines
+
+- story: path 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: flu
+  - action: utter_flu
+  - action: utter_flu_medicines
+
+- story: path 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: stomachache
+  - action: utter_stomachache
+  - action: utter_stomachache_medicines
+  - intent: flu
+  - action: utter_flu
+  - action: utter_flu_medicines
+  - intent: sunstroke
+  - action: utter_sunstroke
+  - action: utter_sunstroke_medicines
+  - intent: weakness
+  - action: utter_weakness
+  - action: utter_weakness_medicines
+  - intent: throat pain
+  - action: utter_throat_pain
+  - action: utter_throat_pain_medicines
+
+

@@ -1,0 +1,156 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      not really
+    intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      very terrible
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
+
+
+- story: path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: sunstroke
+  - action: utter_sunstroke
+  - action: utter_sunstroke_medicines
+
+- story: path 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: utter_flu
+  - action: utter_flu_medicines
+
+- story: path 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: utter_stomachache
+  - action: utter_stomachache_medicines
+
+- story: path 7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: utter_weakness
+  - action: utter_weakness_medicines
+
+- story: path 8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: utter_throat_pain
+  - action: utter_throat_pain_medicines
+
+- story: path 9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: utter_food_poisioning
+  - action: utter_food_poisioning_medicines
+
+- story: path 10
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: i_am_sick
+  - action: utter_sick
+  - intent: utter_acidity
+  - action: utter_acidity_medicines

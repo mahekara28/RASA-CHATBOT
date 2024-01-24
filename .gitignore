@@ -1,0 +1,33 @@
+# Virtual Environment
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Rasa generated files
+actions/__pycache__/
+models/
+results/
+rasa_nlu_model_config.yml
+rasa_nlu_model_metadata.json
+rasa_nlu_model.tf_model/
+
+# Rasa logs
+logs/
+
+# Rasa project-specific files
+*.db
+*.sqlite
+
+# Editor/IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db

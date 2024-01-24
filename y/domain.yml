@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - i_am_sick
+  - fever
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot & My name is Steward powered by Rasa !"
+
+  utter_sick:
+  - text: "Ohh no !! What happened ?? I can prescribe you medicines and remedies !"
+
+  utter_fever:
+  - text: "Ohh!!! If you have the symptoms like 
+  then you can take any of the medicine given below"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
